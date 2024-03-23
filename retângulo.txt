@@ -5,47 +5,44 @@ import java.util.Scanner;
 
 import entities.Rectangle;
 
-public class Program {
+public class Treino {
 
 	public static void main(String[] args) {
-		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		Rectangle retangulo = new Rectangle();
-		
+
 		System.out.print("Enter the width to the rectangle: ");
-		 retangulo.width = sc.nextDouble();
-		 
-		 System.out.print("Enter the height to the rectangle: ");
-		 retangulo.height = sc.nextDouble();
-		 
-		 System.out.println("A área do retângulo é " + retangulo.area());
-		 System.out.println("O diagonal do retângulo é " + retangulo.perimeter());
-		 System.out.println("A diagonal do retângulo é " + retangulo.diagonal());
+		retangulo.width = sc.nextDouble();
 
+		System.out.print("Enter the height to the rectangle: ");
+		retangulo.height = sc.nextDouble();
 
-
+		System.out.printf("A área do retângulo é : %.2f%n", retangulo.area());
+		System.out.printf("O diagonal do retângulo é : %.2f%n", retangulo.perimeter());
+		System.out.printf("A diagonal do retângulo é : %.2f%n", retangulo.diagonal());
 
 	}
 
 }
 
+
 package entities;
 
 public class Rectangle {
-	
 	public double width;
 	public double height;
-	
+
 	public double area() {
 		return width * height;
 	}
-	
+
 	public double perimeter() {
-		return 2*(width + height);
+		return 2 * (width + height);
 	}
-    
+
 	public double diagonal() {
-		return  Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+		return Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
 	}
+
 }
